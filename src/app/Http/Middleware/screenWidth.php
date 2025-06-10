@@ -18,16 +18,15 @@ class screenWidth
      */
     public function handle(Request $request, Closure $next): Response
     {
-// dd('ad');
         $CrawlerDetect = new CrawlerDetect;
         if ($CrawlerDetect->isCrawler() == true) {
             return $next($request);
         }
 
-        $exceptPathArray = config('screenWidth.exceptUrls');
-        if (in_array($request->getPathInfo(), $exceptPathArray)) {
-            return $next($request);
-        }
+        // $exceptPathArray = config('screenWidth.exceptUrls');
+        // if (in_array($request->getPathInfo(), $exceptPathArray)) {
+        //     return $next($request);
+        // }
 
         if (Cookie::get('screenWidth')) {
             return $next($request);
