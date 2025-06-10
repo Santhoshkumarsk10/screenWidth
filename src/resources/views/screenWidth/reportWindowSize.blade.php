@@ -6,7 +6,7 @@
         screenWidth_get = 0;
     }
     let screenWidth_auto_reload = {{ config('screenWidth.auto_reload') }} ?
-        {{ config('samybgt.screenWidth.auto_reload') }} : false;
+        {{ config('screenWidth.auto_reload') }} : false;
     let screenWidth_width = 0;
 
     function screenWidth_update_width() {
