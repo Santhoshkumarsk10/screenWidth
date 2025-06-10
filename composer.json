@@ -1,5 +1,5 @@
 {
-    "name": "packages/screenwidth",
+    "name": "santhosh/screenwidth",
     "description": "Detect and use screen width in Laravel",
     "type": "library",
     "license": "MIT",
