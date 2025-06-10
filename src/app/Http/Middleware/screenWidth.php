@@ -18,7 +18,7 @@ class screenWidth
      */
     public function handle(Request $request, Closure $next): Response
     {
-dd('ad');
+// dd('ad');
         $CrawlerDetect = new CrawlerDetect;
         if ($CrawlerDetect->isCrawler() == true) {
             return $next($request);
