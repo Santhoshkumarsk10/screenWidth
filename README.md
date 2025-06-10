@@ -16,7 +16,7 @@ whereas this package debounces a network request and updates the page on the nex
 
 ## Installation
 ```
-composer require samybgt/screenwidth:2.3
+composer require santhosh/screen-width
 ```
 
 
@@ -56,7 +56,7 @@ return [
 If you want to change the breakpoints as per your need then please create a file in below location and then overwrite the values as per your need. It is a very powerful setting that gives full freedom to the developer to customize according to the requirement.
 
 ```php
-config/samybgt/screenwidth.php
+config/screenwidth.php
 ```
 
 ## Loader
@@ -66,7 +66,7 @@ config/samybgt/screenwidth.php
 Only one time (in first load of application), you will get the message that says we are checking device width to give you the best view of the website. You can customize that UI by creating a file and giving own HTML.
 
 ```php
-resources/views/vendor/samybgt/screenwidth/screenwidth_loader.blade.php
+resources/views/vendor/screenwidth/screenwidth_loader.blade.php
 ```
 
 
@@ -109,7 +109,7 @@ All the code is readymade and ready to use. You don't need to worry about any co
 Alternatively you can use the below code only if above directive doesn't work for you due to any version issue.
 
 ```php
-@include(screenwidth::screenwidth.reportWindowSize)
+@include('screenwidth::screenwidth.reportWindowSize')
 ```
 
 
@@ -146,7 +146,7 @@ Thank you for considering contributing to this tool!
 
 ## Security Vulnerabilities & Suggestions
 
-If you have any suggestions or if you discover a security vulnerability, please send an e-mail to Samy via [samybgt@gmail.com](mailto:samybgt@gmail.com). All security vulnerabilities will be promptly addressed and we can collaborate on the suggestions
+If you have any suggestions or if you discover a security vulnerability, please send an e-mail to Santhoshkumar B via [bsanthoshkumar10@gmail.com](mailto:bsanthoshkumar10@gmail.com). All security vulnerabilities will be promptly addressed and we can collaborate on the suggestions
 
 ## License
 
