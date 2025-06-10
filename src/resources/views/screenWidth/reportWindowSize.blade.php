@@ -5,8 +5,8 @@
     if (isNaN(screenWidth_get) || screenWidth_get <= 0) {
         screenWidth_get = 0;
     }
-    let screenWidth_auto_reload = {{ config('screenWidth.auto_reload') }} ?
-        {{ config('screenWidth.auto_reload') }} : false;
+    // let screenWidth_auto_reload = {{ config('screenWidth.auto_reload') }} ? {{ config('screenWidth.auto_reload') }} : false;
+    let screenWidth_auto_reload = true;
     let screenWidth_width = 0;
 
     function screenWidth_update_width() {
