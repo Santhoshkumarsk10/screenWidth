@@ -1,4 +1,4 @@
-@include('screenWidthLoader.blade')
+@include('screenWidth::screenWidthLoader')
 <form action="{{ route('setscreenWidth') }}" method="post">
     @csrf
     <input type="hidden" name="screenWidth" class="screenWidth" value="">
