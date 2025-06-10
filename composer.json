@@ -1,0 +1,27 @@
+{
+    "name": "package/screenwidth",
+    "description": "Detect and use screen width in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "screenWidth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Santhoshkumar B"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "jaybizzle/laravel-crawler-detect": "dev-master"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "screenWidth\\screenWidthServiceProvider"
+            ]
+        }
+    }
+}
