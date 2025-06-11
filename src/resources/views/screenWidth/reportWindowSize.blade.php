@@ -13,10 +13,10 @@
         screenWidth_width = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
     }
     screenWidth_update_width();
-    console.log('screenWidth_get');
-    console.log(screenWidth_get);
-    console.log('screenWidth_width');
-    console.log(screenWidth_width);
+    // console.log('screenWidth_get');
+    // console.log(screenWidth_get);
+    // console.log('screenWidth_width');
+    // console.log(screenWidth_width);
 
     function reportWindowSize() {
         if (screenWidth_sending_data == true) {
