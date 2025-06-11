@@ -16,7 +16,7 @@ Unlike CSS-based media queries that react in real-time as the user resizes the w
 
 ## Installation
 ```
-composer require santhosh/screen-width v1
+composer require scwi/screen-width v1
 ```
 
 
