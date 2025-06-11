@@ -1,17 +1,17 @@
 ## About Screenwidth
+Screenwidth is a PHP Laravel package with an easy-to-use syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Screenwidth takes the pain out of development by simplifying common tasks used in many web projects, such as:
 
-Screenwidth is a php laravel package with easy to use syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Screenwidth takes the pain out of development by easing common tasks used in many web projects, such as:
+Easy-to-use helper functions
 
-- Easy to use helper functions.
-- Get device type based on width.
-- Check for a specific device type.
+Detect device type based on screen width
 
-Screenwidth is accessible, powerful, and acts as a tools required for large, robust applications.
+Check for a specific device type
+
+Screenwidth is accessible, powerful, and acts as a handy tool required for large, robust applications.
 
 
 ## Using Screenwidth
-When using css, the content of the page will update in realtime as the user resizes the window,
-whereas this package debounces a network request and updates the page on the next page request.
+Unlike CSS-based media queries that react in real-time as the user resizes the window, this package debounces the network request and updates the view on the next page load. This makes it more reliable for backend-based rendering logic.
 
 
 ## Installation
@@ -22,7 +22,7 @@ composer require santhosh/screen-width v1
 
 ## Default Breakpoints
 
-Default breakpoints are given below:
+The default breakpoints are shown below:
 
 ```php
 <?php
@@ -53,11 +53,12 @@ return [
 
 (This step is optional)
 
-If you want to change the breakpoints as per your need then please create a file in below location and then overwrite the values as per your need. It is a very powerful setting that gives full freedom to the developer to customize according to the requirement.
+If you want to customize the breakpoints, you can create your own config file and override the default values.
 
 ```php
 config/screenWidth.php
 ```
+This is a powerful option that gives developers full control based on their app needs.
 
 ## Loader
 
@@ -66,13 +67,17 @@ config/screenWidth.php
 Only one time (in first load of application), you will get the message that says we are checking device width to give you the best view of the website. You can customize that UI by creating a file and giving own HTML.
 
 ```php
-resources/views/vendor/screenwidth/screenwidth_loader.blade.php
+resources/views/vendor/screenWidth/screenWidthLoader.blade.php
 ```
 
 
 ## Middleware
 
-Middleware is already created by the vendor you just need to apply this middleware in your route group.
+he middleware is already provided with the package. You just need to apply it to your routes.
+
+Middleware Name: screenWidth
+
+Example: Apply to all routes in web.php
 
 ```php
 screenWidth
@@ -87,15 +92,16 @@ Route::middleware(['web','screenWidth'])->namespace($this->namespace)->group(bas
 
 ## On Screen Resize Event
 
-All the code is readymade and ready to use. You don't need to worry about any coding, just include this file and resize will start working. It's important that you place it in the layout file for your application to look its best. I have it in my layout file `app.blade.php` and on the `login`/`register` pages. 
+All the resize detection code is prebuilt and ready to use. Just include this file in your main layout (e.g. app.blade.php) or in your login/register views:
 
 ```php
 @include('screenWidth::screenWidth.reportWindowSize')
 ```
+This ensures the screen width is captured properly during resizing.
 
 ## Helpers
 
-Helpers function are already created by the vendor and you just need to call the function directly and use it in your code.
+The package provides the following helper functions:
 
 ```php
 // To get the width of the client screen.
@@ -119,15 +125,15 @@ screenwidth_is('desktop')
 
 ## Contributing
 
-Thank you for considering contributing to this tool!
+Thanks for considering contributing to this tool!
 
-[Palani Kumar](https://www.instagram.com/palanikumar_45)
+Developed by: Palanikumar (https://www.instagram.com/palanikumar_45)
 
 
 ## Security Vulnerabilities & Suggestions
 
-If you have any suggestions or if you discover a security vulnerability, please send an e-mail to Santhoshkumar B via [bsanthoshkumar10@gmail.com](mailto:bsanthoshkumar10@gmail.com). All security vulnerabilities will be promptly addressed and we can collaborate on the suggestions
+If you have suggestions or find a security vulnerability, please send an email to Santhoshkumar B via bsanthoshkumar10@gmail.com. All issues will be promptly addressed, and we welcome collaboration on improvements.
 
 ## License
 
-The MIT License (MIT). Please see [License File](/LICENSE.md) for more information.
+The MIT License (MIT). Please see the License File for more information.
