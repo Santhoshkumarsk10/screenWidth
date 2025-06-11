@@ -56,7 +56,7 @@ return [
 If you want to change the breakpoints as per your need then please create a file in below location and then overwrite the values as per your need. It is a very powerful setting that gives full freedom to the developer to customize according to the requirement.
 
 ```php
-config/screenwidth.php
+config/screenWidth.php
 ```
 
 ## Loader
@@ -75,14 +75,14 @@ resources/views/vendor/screenwidth/screenwidth_loader.blade.php
 Middleware is already created by the vendor you just need to apply this middleware in your route group.
 
 ```php
-screenwidth
+screenWidth
 ```
 
 Example 1: Apply complete to the web.php file
 ```php
 app/Providers/RouteServiceProvider.php
 
-Route::middleware(['web','screenwidth'])->namespace($this->namespace)->group(base_path('routes/web.php'));
+Route::middleware(['web','screenWidth'])->namespace($this->namespace)->group(base_path('routes/web.php'));
 ```
 
 ## On Screen Resize Event
@@ -90,7 +90,7 @@ Route::middleware(['web','screenwidth'])->namespace($this->namespace)->group(bas
 All the code is readymade and ready to use. You don't need to worry about any coding, just include this file and resize will start working. It's important that you place it in the layout file for your application to look its best. I have it in my layout file `app.blade.php` and on the `login`/`register` pages. 
 
 ```php
-@include('screenwidth::screenwidth.reportWindowSize')
+@include('screenWidth::screenWidth.reportWindowSize')
 ```
 
 ## Helpers
