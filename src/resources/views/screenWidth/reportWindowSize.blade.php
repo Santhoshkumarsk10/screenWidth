@@ -67,6 +67,5 @@
         reportWindowSize();
     } else {
         console.log('No significant width change or already in sync.');
-        
     }
 </script>
