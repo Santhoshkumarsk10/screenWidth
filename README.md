@@ -16,7 +16,7 @@ whereas this package debounces a network request and updates the page on the nex
 
 ## Installation
 ```
-composer require santhosh/screen-width
+composer require santhosh/screen-width v1
 ```
 
 
