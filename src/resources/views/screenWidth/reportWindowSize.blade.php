@@ -5,7 +5,7 @@
     if (isNaN(screenWidth_get) || screenWidth_get <= 0) {
         screenWidth_get = 0;
     }
-    console.log('screenWidth auto reload');
+    console.log('screenWidth auto Reload');
     console.log({{ config('screenWidth.auto_reload') }} );
     
 
