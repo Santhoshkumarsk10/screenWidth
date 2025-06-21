@@ -30,7 +30,8 @@ class screenWidthServiceProvider extends ServiceProvider
     public function loadConfigs()
     {
         // use the vendor configuration file as fallback
-        $this->mergeConfigFrom(__DIR__ . '/config/screenWidth.php', 'package.screenWidth');
+        // $this->mergeConfigFrom(__DIR__ . '/config/screenWidth.php', 'package.screenWidth');
+        $this->mergeConfigFrom(__DIR__ . '/config/screenWidth.php', 'screenWidth');
     }
     public function registerMiddlewareGroup(Router $router)
     {
